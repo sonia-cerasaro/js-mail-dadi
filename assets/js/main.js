@@ -15,13 +15,13 @@ var mail_utente = prompt("Inserisci la tua mail.");
 
 var controllo = false;
 
-for (var i = 0; i > lista.lenght; ++i ) {
+for (var i = 0; i < lista.length; ++i ) {
   if (lista[i] == mail_utente) {
     controllo = true;
   }
 }
 
-if (controllo = true) {
+if (controllo) {
   console.log("La tua mail e' presente.")
 } else {
   console.log("La tua mail e' assente.")
