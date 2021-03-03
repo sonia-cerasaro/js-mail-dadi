@@ -1,43 +1,40 @@
-var lista = ["dino@gmail.com", "stella@gmail.com", "luna@gmail.com"];
-
-var mail_utente = prompt("Inserisci la tua mail.");
-
-var controllo = false;
-
-for (var i = 0; i < lista.length; ++i ) {
-  if (lista[i] == mail_utente) {
-    controllo = true;
-  }
-}
-
-if (controllo) {
-  console.log("La tua mail e' presente.")
-} else {
-  console.log("La tua mail e' assente.")
-}
+// var lista = ["dino@gmail.com", "stella@gmail.com", "luna@gmail.com"];
+// var mail_utente = prompt("Inserisci la tua mail.");
+// var controllo = false;
+//
+// for (var i = 0; i < lista.length; ++i ) {
+//   if (lista[i] == mail_utente) {
+//     controllo = true;
+//     break;
+//   }
+// }
+//
+// if (controllo) {
+//   console.log("La tua mail e' presente.")
+// } else {
+//   console.log("La tua mail e' assente.")
+// }
 
 // GIOCO DADI
+//
+var min = 1;
+var max = 6;
 
-for (var dado_computer =[], i=0; i < 1; ++i)
-dado_computer[Math.floor((Math.random()* 6) + 1)]=i;
+// genera numero pc:
 
-console.log(dado_computer);
+var pc = Math.floor((Math.random()*max) + min);
+var utente = Math.floor((Math.random()*max) + min);
 
-for (var dado_utente =[], i=0; i < 1; ++i)
-dado_utente[Math.floor((Math.random()* 6) + 1)]=i;
+var risultato = document.getElementById('risultato');
 
-console.log(dado_utente);
-
-if (dado_computer < dado_utente) {
-  console.log("Ha vinto il computer!")
+// controlla numero piu alto
+if (pc, utente) {
+  risultato.innerHTML = "Il pc vince";
+} else if (utente > pc) {
+  risultato.innerHTML = "L'utente vince";
 } else {
-  console.log("Hai vinto tu!")
+  risultato.innerHTML = "Finita con pareggio!";
 }
-
-
-
-
-
 
 
 // I ITERAZIONE + spiegazione algoritmo
@@ -51,7 +48,7 @@ if (dado_computer < dado_utente) {
 // poi esce dal ciclo))
 //
 // se i(index) di lista(3) e' strettamente uguale alla mail_utente-
-// in parole povere- se nell'indice della lista c'e' qualcosa di identico
+// in parole povere- se nell'indice della lista l'input e' identico
 // alla mail_utente, la variabile di controllo prendera' valore True,
 // altrimenti se non c'e' nulla di identico rimarra' false.
 //
